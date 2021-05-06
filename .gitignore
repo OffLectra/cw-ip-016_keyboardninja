@@ -1,0 +1,20 @@
+# ignoring all files
+*
+
+# deleted from ignore files that have the extension
+!*.*
+
+# deleted all directories from ignore
+!*/
+
+# deleted a Makefile from ignore
+!Makefile
+
+# deleted static libraries from ignore
+!*.a
+
+# deleted object files from ignore
+!*.o
+
+# deleted files of the original dependency from ignore
+!*.d
