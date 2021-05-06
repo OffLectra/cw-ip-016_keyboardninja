@@ -18,10 +18,10 @@ OBJ = obj
 APPLICATION_PATH = $(BIN)/$(APPLICATION_NAME)
 LIBRARY_PATH = $(OBJ)/$(SRC)/$(APPLICATION_LIB)/$(APPLICATION_LIB).a
 
-APPLICATION_SRC = $(shell find $(SRC)/$(APPLICATION_NAME) -name '*.c')
-APPLICATION_OBJ = $(APPLICATION_SRC:$(SRC)/%.c=$(OBJ)/$(SRC)/%.o)
+APPLICATION_SRC = $(shell find $(SRC)/$(APPLICATION_NAME) -name '*.cpp')
+APPLICATION_OBJ = $(APPLICATION_SRC:$(SRC)/%.cpp=$(OBJ)/$(SRC)/%.o)
 
-LIBRARY_SRC = $(shell find $(SRC)/$(APPLIACATION_LIB) -name '*.c')
-LIBRARY_OBJ = $(LIBRARY_SRC:$(SRC)/%.c=$(OBJ)/$(SRC)/%.o)
+LIBRARY_SRC = $(shell find $(SRC)/$(APPLIACATION_LIB) -name '*.cpp')
+LIBRARY_OBJ = $(LIBRARY_SRC:$(SRC)/%.cpp=$(OBJ)/$(SRC)/%.o)
 
 DEPENDENCIES = $(APPLICATION_OBJ:.o=.d)
