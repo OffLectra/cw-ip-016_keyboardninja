@@ -1,12 +1,5 @@
-# the compiler used to build
 CC = g++
-
-# flags:
-# -Wall: basic warnings 
-# -Wextra: additional warnings
-# -Wpedantic: code compliance with ISO C++ standard
-# -Werror: all warnings=errors
-CXXFLAGS = -Wall -Wextra -Wpedantic -Werror
+CFLAGS = -Wall -Wextra -Wpedantic -Werror
 CPPFLAGS = -MMD -I src
 
 APPLICATION_NAME = KBNinja
@@ -36,7 +29,14 @@ $(APPLICATION_PATH): $(APPLICATION_OBJ) $(LIBRARY_PATH)
 	$(CC) $(CFLAGS) $(CPPFLAGS) -o $@ $^
 	
 $(OBJ)/%.o: %.cpp
-	$(CC) -cpp $(CFLAGS) $(CPPFLAGS) -o $@ $<
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
 	
 $(LIBRARY_PATH): $(LIBRARY_OBJ)
 	ar rcs $@ $^
+
+.PHONY: clean
+clean:
+	$(RM) $(APPLICATION_PATH)
+	find $(OBJ) -name '*.o' -exec $(RM) '{}' \;
+	find $(OBJ) -name '*.d' -exec $(RM) '{}' \;
+	find $(OBJ) -name '*.a' -exec $(RM) '{}' \;
