@@ -10,11 +10,11 @@
 # deleted a Makefile from ignore
 !Makefile
 
-# deleted static libraries from ignore
-!*.a
+# added static libraries in ignore
+*.a
 
-# deleted object files from ignore
-!*.o
+# added object files in ignore
+*.o
 
-# deleted files of the original dependency from ignore
-!*.d
+# added files of the original dependency in ignore
+*.d
