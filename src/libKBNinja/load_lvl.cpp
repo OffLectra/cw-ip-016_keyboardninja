@@ -8,7 +8,9 @@ using namespace std;
 void load_lvl(string language, int lvl)
 {
     string path = "src/resources/control.txt";
+
     string str;
+
     ifstream file(path);
     if (!file.is_open())
         cout << "Error open file!";
