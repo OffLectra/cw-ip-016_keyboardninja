@@ -1,5 +1,5 @@
 # the compiler used to build
-CXX = g++
+CC = g++
 
 # flags:
 # -Wall: basic warnings 
