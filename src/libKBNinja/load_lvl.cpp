@@ -33,9 +33,9 @@ void load_lvl(string language, int lvl)
         while (getline(ss, item, separator)) {
             elements.push_back(item);
         }
-
-        for (unsigned long int i = 0; i < elements.size(); ++i) {
-            cout << elements[i] << endl;
-        }
+        
+        int purpose = stoi(elements[0]);
+        int time = stoi(elements[1]);
+        int errors = stoi(elements[2]);
     }
 }
