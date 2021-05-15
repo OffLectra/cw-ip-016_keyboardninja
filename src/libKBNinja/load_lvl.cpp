@@ -34,7 +34,7 @@ void load_lvl(string language, int lvl)
             elements.push_back(item);
         }
 
-        for (int i = 0; i < elements.size(); ++i) {
+        for (unsigned long int i = 0; i < elements.size(); ++i) {
             cout << elements[i] << endl;
         }
     }
