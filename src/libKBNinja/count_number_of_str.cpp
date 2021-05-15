@@ -1,3 +1,4 @@
+#include "count_number_of_str.h"
 #include <fstream>
 #include <iostream>
 #include <string>
