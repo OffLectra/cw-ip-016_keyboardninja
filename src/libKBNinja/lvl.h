@@ -1,4 +1,4 @@
 #pragma once
 #include <iostream>
 #include <string>
-void lvl(std::string path);
+void lvl(std::string path, int purpose);
