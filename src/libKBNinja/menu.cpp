@@ -33,12 +33,15 @@ int menu()
             cout << "Exit" << endl << endl << endl;
         }
         input = getch();
-        if (input == 224) {
+        if (input == 27) {
             input = getch();
-            if (input == 119)
-                key++;
-            if (input == 115)
-                key--;
+            if (input == 91) {
+                input = getch();
+                if (input == 66)
+                    key++;
+                if (input == 65)
+                    key--;
+            }
         }
     } while (input != 10);
 
