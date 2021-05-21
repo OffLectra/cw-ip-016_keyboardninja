@@ -18,6 +18,7 @@ void lvl(string path, int purpose)
     used_str.reserve(purpose);
 
     int errors = 0;
+    int number_characters = 0;
     clock_t time_start, time_end;
 
     time(&time_start);
@@ -25,6 +26,8 @@ void lvl(string path, int purpose)
     for (int i = 0; i < purpose; ++i) {
         system("clear");
         string str = select_str(path, number_lines, used_str);
+
+        number_characters += str.length();
 
         cout << str << endl;
 
@@ -42,5 +45,5 @@ void lvl(string path, int purpose)
 
     double time = difftime(time_end, time_start);
 
-    results(errors, time);
+    results(errors, time, number_characters);
 }
