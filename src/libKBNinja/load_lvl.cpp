@@ -1,5 +1,6 @@
 #include "get_str.h"
 #include "load_lvl.h"
+#include "seporate_str.h"
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -10,22 +11,13 @@ using namespace std;
 void load_lvl(string language, int lvl)
 {
     string control_lvl = get_str(lvl);
-    cout << control_lvl;
     string lvl_file;
 
-    char separator = ';';
+    int purpose;
+    double time;
+    int errors;
+    seporate_str(control_lvl, purpose, time, errors);
 
-    vector<string> elements;
-
-    stringstream ss(control_lvl);
-    string item;
-    while (getline(ss, item, separator)) {
-        elements.push_back(item);
-    }
-
-    // int purpose = stoi(elements[0]);
-    // int time = stoi(elements[1]);
-    // int errors = stoi(elements[2]);
     if (language == "RU") {
         if (lvl >= 1 && lvl <= 3) {
             lvl_file = "resources/symbol_RU.txt";
