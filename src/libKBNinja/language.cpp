@@ -1,5 +1,5 @@
-#include "language.h"
 #include "getch.h"
+#include "language.h"
 #include <iostream>
 
 using namespace std;
@@ -8,6 +8,7 @@ int language()
     int key = 0;
     int input;
     do {
+        system("clear");
         cout << "Choose language:" << endl;
         key = (key + 2) % 2;
         if (key == 0)
@@ -20,6 +21,18 @@ int language()
         else
             cout << "English" << endl;
 
-    } while ();
+        input = getch();
+        if (input == 27) {
+            input = getch();
+            if (input == 91) {
+                input = getch();
+                if (input == 66)
+                    key++;
+                if (input == 65)
+                    key--;
+            }
+        }
+    } while (input != 10);
+    system("clear");
     return key;
 }
