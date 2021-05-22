@@ -1,4 +1,5 @@
 #include "lvl.h"
+#include "check_pass_lvl.h"
 #include "count_number_of_str.h"
 #include "getch.h"
 #include "results.h"
@@ -10,7 +11,7 @@
 
 using namespace std;
 
-void lvl(string path, int purpose)
+void lvl(string path, int purpose, int max_errors, double max_time)
 {
     int number_lines = count_number_of_str(path);
 
@@ -45,5 +46,7 @@ void lvl(string path, int purpose)
 
     double time = difftime(time_end, time_start);
 
-    results(errors, time, number_characters);
+    int pass_lvl = check_pass_lvl(time, max_time, errors, max_errors);
+
+    results(errors, time, number_characters, pass_lvl);
 }
