@@ -1,5 +1,5 @@
-#include "getch.h"
 #include "language.h"
+#include "getch.h"
 #include <iostream>
 
 using namespace std;
