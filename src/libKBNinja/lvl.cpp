@@ -1,9 +1,5 @@
 #include "lvl.h"
-#include "check_pass_lvl.h"
-#include "count_number_of_str.h"
-#include "getch.h"
-#include "results.h"
-#include "select_str.h"
+
 #include <ctime>
 #include <iostream>
 #include <string>
