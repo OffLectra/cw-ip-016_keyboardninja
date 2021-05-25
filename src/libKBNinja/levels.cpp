@@ -6,6 +6,7 @@ using namespace std;
 int levels()
 {
     int key = 0;
+    int input;
     do {
         system("clear");
         cout << "Choose level for continue" << endl << endl;
@@ -69,8 +70,18 @@ int levels()
             cout << "<LEVEL 12>" << endl;
         else
             cout << "LEVEL 12" << endl;
-
-    } while (1);
+        input = getch();
+        if (input == 27) {
+            input = getch();
+            if (input == 91) {
+                input = getch();
+                if (input == 66)
+                    key++;
+                if (input == 65)
+                    key--;
+            }
+        }
+    } while (input != 10);
     system("clear");
     return key;
 }
