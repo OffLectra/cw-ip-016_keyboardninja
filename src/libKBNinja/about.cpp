@@ -13,4 +13,8 @@ void about()
     cout << "     Ilya Zaicev     " << endl << endl;
 
     cout << "For exit press Enter" << endl;
+    do {
+        input = getch();
+    } while (input != 10);
+    system("clear");
 }
