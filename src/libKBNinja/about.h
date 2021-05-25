@@ -1,2 +1,2 @@
 #pragma once
-int about();
+void about();
