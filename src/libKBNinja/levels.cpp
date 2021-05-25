@@ -85,4 +85,3 @@ int levels()
     system("clear");
     return key;
 }
-}
