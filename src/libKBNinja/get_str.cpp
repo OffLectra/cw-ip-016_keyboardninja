@@ -1,5 +1,4 @@
 #include "get_str.h"
-
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -24,6 +23,6 @@ string get_str(int lvl)
         }
     }
     file.close();
-    
+
     return str;
 }
