@@ -10,7 +10,7 @@
 
 using namespace std;
 
-void load_lvl (string language , int number_lvl)
+void load_lvl (string language,int number_lvl)
 {
     string control_lvl = get_str(number_lvl);
 

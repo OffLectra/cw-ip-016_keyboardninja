@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void seporate_str(string str, int &purpose, double &time, int &errors)
+void seporate_str(string str, int& purpose, double& time, int& errors)
 {
     char separator = ';';
 
