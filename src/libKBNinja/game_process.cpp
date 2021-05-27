@@ -1,4 +1,5 @@
 #include "language.h"
+#include "about.h"
 #include "menu.h"
 #include <iostream>
 #include <string>
@@ -17,7 +18,7 @@ void game_process()
             break;
         case 1:
             break;
-        case 2:
+        case 2: about();
             break;
         case 3:
             is_menu = false;
