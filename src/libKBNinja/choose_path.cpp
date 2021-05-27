@@ -4,28 +4,38 @@
 
 using namespace std;
 
+const string file_path[]
+        = {"src/resources/symbol_RU.txt",
+           "src/resources/words_RU.txt",
+           "src/resources/sentence_RU.txt",
+           "src/resources/sparagraph_RU.txt",
+           "src/resources/symbol_EN.txt",
+           "src/resources/words_EN.txt",
+           "src/resources/sentence_EN.txt",
+           "src/resources/sparagraph_EN.txt"};
+
 string choose_path(string language, int lvl)
 {
     string path;
-    if (language = "ru") {
+    if (language = "RU") {
         if (lvl >= 1 && lvl <= 3)
-            path = "src/resources/symbol_RU.txt";
+            path = file_path[0];
         if (lvl >= 4 && lvl <= 6)
-            path = "src/resources/words_RU.txt";
+            path = file_path[1];
         if (lvl >= 7 && lvl <= 9)
-            path = "src/resources/sentence_RU.txt";
+            path = file_path[2];
         if (lvl >= 10 && lvl <= 12)
-            path = "src/resources/sparagraph_RU.txt";
+            path = file_path[3];
     }
-    if (language = "en") {
+    if (language = "EN") {
         if (lvl >= 1 && lvl <= 3)
-            path = "src/resources/symbol_EN.txt";
+            path = file_path[4];
         if (lvl >= 4 && lvl <= 6)
-            path = "src/resources/words_EN.txt";
+            path = file_path[5];
         if (lvl >= 7 && lvl <= 9)
-            path = "src/resources/sentence_EN.txt";
+            path = file_path[6];
         if (lvl >= 10 && lvl <= 12)
-            path = "src/resources/sparagraph_EN.txt";
+            path = file_path[7];
     }
     return path;
 }
