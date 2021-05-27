@@ -17,7 +17,8 @@ const string file_path[]
 string choose_path(string language, int lvl)
 {
     string path;
-    if (language = "RU") {
+
+    if (language == "RU") {
         if (lvl >= 1 && lvl <= 3)
             path = file_path[0];
         if (lvl >= 4 && lvl <= 6)
@@ -27,7 +28,7 @@ string choose_path(string language, int lvl)
         if (lvl >= 10 && lvl <= 12)
             path = file_path[3];
     }
-    if (language = "EN") {
+    if (language == "EN") {
         if (lvl >= 1 && lvl <= 3)
             path = file_path[4];
         if (lvl >= 4 && lvl <= 6)
