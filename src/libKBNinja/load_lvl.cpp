@@ -19,4 +19,6 @@ void load_lvl(string language, int lvl)
     seporate_str(control_lvl, purpose, time, errors);
 
     string path = choose_path(language, lvl);
+
+    lvl(path, purpose, errors, time);
 }
