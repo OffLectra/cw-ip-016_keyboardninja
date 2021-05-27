@@ -1,6 +1,7 @@
 #include "load_lvl.h"
 #include "choose_path.h"
 #include "get_str.h"
+#include "lvl.h"
 #include "seporate_str.h"
 #include <iostream>
 #include <sstream>
@@ -9,16 +10,16 @@
 
 using namespace std;
 
-void load_lvl(string language, int lvl)
+void load_lvl (string language , int number_lvl)
 {
-    string control_lvl = get_str(lvl);
+    string control_lvl = get_str(number_lvl);
 
-    int purpose;
-    double time;
-    int errors;
+    int purpose = 0;
+    double time = 0.0;
+    int errors = 0;
     seporate_str(control_lvl, purpose, time, errors);
 
-    string path = choose_path(language, lvl);
+    string path = choose_path(language, number_lvl);
 
     lvl(path, purpose, errors, time);
 }
