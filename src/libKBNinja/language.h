@@ -1,2 +1,5 @@
 #pragma once
-int language();
+#include <iostream>
+#include <string>
+using namespace std;
+string language();
