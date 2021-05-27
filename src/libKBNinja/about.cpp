@@ -7,10 +7,10 @@ void about()
 {
     int input;
     cout << "Programm made in 2021" << endl;
-    cout << "       Autors:       " << endl;
-    cout << "    Alexey Egoshin   " << endl;
-    cout << "     Maxim Valter    " << endl;
-    cout << "     Ilya Zaicev     " << endl << endl;
+    cout << "Autors:" << endl;
+    cout << "Alexey Egoshin | alexegoshin0403@yandex.ru" << endl;
+    cout << "Maxim Valter | maxuswill@yandex.ru" << endl;
+    cout << "Ilya Zaicev | ilyazaytsev2017@bk.ru" << endl << endl;
 
     cout << "For exit press Enter" << endl;
     do {
