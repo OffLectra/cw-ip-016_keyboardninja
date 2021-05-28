@@ -11,11 +11,10 @@ void create_save(string language, int lvl, bool is_next_lvl)
     ofstream file(path);
     if (file.is_open()) {
         file << language << endl;
-        file << lvl << endl;
         if (is_next_lvl)
-            file << 1;
+            file << lvl + 1;
         else
-            file << 0;
+            file << lvl;
     }
     file.close();
 }
