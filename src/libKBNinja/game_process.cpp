@@ -1,13 +1,16 @@
 #include "about.h"
+#include "create_save.h"
 #include "error_lvl.h"
 #include "language.h"
 #include "levels.h"
+#include "load_lvl.h"
 #include "load_save.h"
 #include "menu.h"
 #include "new_game_save.h"
 #include <fstream>
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 void game_process()
@@ -17,8 +20,10 @@ void game_process()
     bool level = false;
     int lvl;
     int chooselvl = 0;
+    bool is_next_lvl;
     int menu_item;
     load_save(lang, lvl);
+
     do {
         menu_item = menu();
         switch (menu_item) {
@@ -26,11 +31,11 @@ void game_process()
             lang = language();
             lvl = 1;
             new_game(lang, lvl);
-            is_menu = false;
+            load_lvl(lang, lvl, is_next_lvl);
+            create_save(lang, lvl, is_next_lvl);
             break;
         case 1:
             level = false;
-            is_menu = false;
             if (lang != "") {
                 do {
                     chooselvl = levels();
@@ -38,8 +43,11 @@ void game_process()
                         if (chooselvl > lvl) {
                             error_lvl();
                             chooselvl = 0;
-                        } else
+                        } else {
                             level = true;
+                            load_lvl(lang, lvl, is_next_lvl);
+                            create_save(lang, lvl, is_next_lvl);
+                        }
                     } else {
                         level = true;
                         is_menu = true;
