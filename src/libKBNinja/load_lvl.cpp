@@ -1,6 +1,6 @@
+#include "load_lvl.h"
 #include "choose_path.h"
 #include "get_str.h"
-#include "load_lvl.h"
 #include "lvl.h"
 #include "seporate_str.h"
 #include <iostream>
