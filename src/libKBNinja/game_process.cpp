@@ -45,8 +45,8 @@ void game_process()
                         is_menu = true;
                     }
                 } while (level == false);
-            }
-            else is_menu = true;
+            } else
+                is_menu = true;
             break;
         case 2:
             about();
@@ -56,5 +56,4 @@ void game_process()
             break;
         }
     } while (is_menu == true);
-    cout << lang << lvl;
 }
