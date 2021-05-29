@@ -79,9 +79,13 @@ int levels()
                     key++;
                 if (input == 65)
                     key--;
+                if (input == 27)
+                    key = 20;
             }
         }
-    } while (input != 10);
+    } while (input != 10 && input != 27);
     system("clear");
+    if (input == 27)
+        key = 20;
     return key;
 }
