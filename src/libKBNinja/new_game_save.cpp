@@ -3,12 +3,14 @@
 #include <iostream>
 #include <string>
 
-void new_game_save(string lang, int lvl)
+using namespace std;
+void new_game(string lang, int lvl)
 {
-    fstream savefile("save.txt");
+    string path = "src/resources/save.txt";
+    ofstream savefile(path);
     if (savefile.is_open()) {
         savefile << lang << endl;
-        savefile << checklvl << endl;
+        savefile << lvl << endl;
     }
     savefile.close();
 }
