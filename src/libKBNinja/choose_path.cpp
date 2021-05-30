@@ -16,11 +16,11 @@ string choose_path(string language, int lvl)
             = {"src/resources/symbol_RU.txt",
                "src/resources/words_RU.txt",
                "src/resources/sentence_RU.txt",
-               "src/resources/sparagraph_RU.txt",
+               "src/resources/paragraph_RU.txt",
                "src/resources/symbol_EN.txt",
                "src/resources/words_EN.txt",
                "src/resources/sentence_EN.txt",
-               "src/resources/sparagraph_EN.txt"};
+               "src/resources/paragraph_EN.txt"};
     string path;
 
     if (language == "RU") {
