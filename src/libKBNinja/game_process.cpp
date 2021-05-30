@@ -50,28 +50,31 @@ void game_process()
             break;
         case 1:
             level = false;
-            if (lang != "") {
-                do {
-                    chooselvl = levels(); // calling the level map display
-                                          // function
-                    if (chooselvl != 20) {
-                        if (chooselvl > lvl) {
-                            error_lvl();   // display an error message
-                            chooselvl = 0; // resetting the selected level
+            if (lvl != 13) {
+                if (lang != "") {
+                    do {
+                        chooselvl = levels(); // calling the level map display
+                                              // function
+                        if (chooselvl != 20) {
+                            if (chooselvl + 1 > lvl) {
+                                error_lvl();   // display an error message
+                                chooselvl = 0; // resetting the selected level
+                            } else {
+                                level = true; // level selected - exit the loop
+
+                                // calling the function that starts the level
+                                load_lvl(lang, lvl, is_next_lvl);
+
+                                // calling the create save function
+                                create_save(lang, lvl, is_next_lvl);
+                            }
                         } else {
-                            level = true; // level selected - exit the loop
-
-                            // calling the function that starts the level
-                            load_lvl(lang, lvl, is_next_lvl);
-
-                            // calling the create save function
-                            create_save(lang, lvl, is_next_lvl);
+                            level = true;
+                            is_game = true;
                         }
-                    } else {
-                        level = true;
-                        is_game = true;
-                    }
-                } while (level == false);
+                    } while (level == false);
+                } else
+                    is_game = true;
             } else
                 is_game = true;
             break;
