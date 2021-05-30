@@ -7,6 +7,10 @@
 
 using namespace std;
 
+/*
+results - this function outputs the level results
+*/
+
 void results(
         int errors,
         double time,
@@ -53,7 +57,7 @@ void results(
 
     cout << endl << "For exit press Enter" << endl;
 
-    int input; //button
+    int input; // button
     do {
         input = getch();
     } while (input != 10);
