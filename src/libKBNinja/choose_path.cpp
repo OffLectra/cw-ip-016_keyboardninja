@@ -24,41 +24,31 @@ string choose_path(string language, int lvl)
     string path;
 
     if (language == "RU") {
-        if (lvl >= 1 && lvl <= 3) {
+        if (lvl >= 1 && lvl <= 3)
             path = file_path[0];
-            break;
-        }
-        if (lvl >= 4 && lvl <= 6) {
+
+        if (lvl >= 4 && lvl <= 6)
             path = file_path[1];
-            break;
-        }
-        if (lvl >= 7 && lvl <= 9) {
+
+        if (lvl >= 7 && lvl <= 9)
             path = file_path[2];
-            break;
-        }
-        if (lvl >= 10 && lvl <= 12) {
+
+        if (lvl >= 10 && lvl <= 12)
             path = file_path[3];
-            break;
-        }
     }
 
     if (language == "EN") {
-        if (lvl >= 1 && lvl <= 3) {
+        if (lvl >= 1 && lvl <= 3)
             path = file_path[4];
-            break;
-        }
-        if (lvl >= 4 && lvl <= 6) {
+
+        if (lvl >= 4 && lvl <= 6)
             path = file_path[5];
-            break;
-        }
-        if (lvl >= 7 && lvl <= 9) {
+
+        if (lvl >= 7 && lvl <= 9)
             path = file_path[6];
-            break;
-        }
-        if (lvl >= 10 && lvl <= 12) {
+
+        if (lvl >= 10 && lvl <= 12)
             path = file_path[7];
-            break;
-        }
     }
 
     return path;
