@@ -1,26 +1,37 @@
 #include "load_save.h"
+
 #include <fstream>
 #include <iostream>
 #include <string>
 
 using namespace std;
 
+/*
+load_save - this function loads data from a save file and passes it to the
+appropriate variables
+*/
+
 void load_save(string& lang, int& lvl)
 {
-    string save;
-    string path = "src/resources/save.txt";
-    ifstream savefile(path);
-    if (!savefile.is_open())
-        cout << "Error";
+    const string path = "src/resources/save.txt";
+    string str;
 
-    int check = 0;
-    while (getline(savefile, save)) {
-        check++;
-        if (check == 1) {
-            lang = save;
-        }
-        if (check == 2) {
-            lvl = atoi(save.c_str());
+    ifstream savefile(path);
+
+    // if you can't open the file, we display an error message. otherwise, we
+    // get the data from the file and put it in variables
+    if (!savefile.is_open())
+        cout << "Error open file with save!" << endl;
+    else {
+        int current_str = 0;
+        while (getline(savefile, str)) {
+            current_str++;
+            if (current_str == 1) {
+                lang = str;
+            }
+            if (current_str == 2) {
+                lvl = atoi(str.c_str());
+            }
         }
     }
     savefile.close();

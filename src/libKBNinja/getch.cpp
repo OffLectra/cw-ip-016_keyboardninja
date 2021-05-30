@@ -1,3 +1,5 @@
+#include "getch.h"
+
 #include <cstdio>
 #include <termios.h>
 

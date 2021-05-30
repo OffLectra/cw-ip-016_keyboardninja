@@ -1,6 +1,5 @@
-#include <iostream>
+#pragma once
+
 #include <string>
 
-using namespace std;
-
-string choose_path(string language, int lvl);
+std::string choose_path(std::string language, int lvl);

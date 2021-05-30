@@ -1,13 +1,20 @@
 #include "get_str.h"
+
 #include <fstream>
 #include <iostream>
 #include <string>
 
 using namespace std;
 
+/*
+get_srt - this function searches for the desired line in the file with the level
+parameters
+*/
+
 string get_str(int lvl)
 {
-    string path = "src/resources/control.txt";
+    const string path = "src/resources/control.txt";
+
     string str;
     ifstream file(path);
 

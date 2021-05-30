@@ -1,10 +1,16 @@
 #include "seporate_str.h"
+
 #include <iostream>
 #include <sstream>
 #include <string>
 #include <vector>
 
 using namespace std;
+
+/*
+tseporate_str - his function splits the resulting string into variables and
+enters the values in the level parameters
+*/
 
 void seporate_str(string str, int& purpose, double& time, int& errors)
 {
@@ -14,9 +20,11 @@ void seporate_str(string str, int& purpose, double& time, int& errors)
 
     stringstream ss(str);
     string item;
+
     while (getline(ss, item, separator)) {
         elements.push_back(item);
     }
+
     purpose = stoi(elements[0]);
     time = (double)stoi(elements[1]);
     errors = stoi(elements[2]);

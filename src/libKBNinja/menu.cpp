@@ -1,14 +1,26 @@
 #include "menu.h"
+
+#include "constants.h"
 #include "getch.h"
+
 #include <iostream>
+
 using namespace std;
+
+/*
+menu - this function is responsible for selecting the desired item. the movement
+is performed by pressing the keys up and down, the choice is enter
+*/
+
 int menu()
 {
-    int key = 0;
-    int input;
+    int key = 0; // menu item
+    int input;   // key pressed
     do {
         system("clear");
+
         key = (key + 4) % 4;
+
         if (key == 0) {
             cout << "<New game>" << endl << endl << endl;
         } else {
@@ -32,19 +44,22 @@ int menu()
         } else {
             cout << "Exit" << endl << endl << endl;
         }
+
         input = getch();
-        if (input == 27) {
+
+        if (input == funct_button) {
             input = getch();
-            if (input == 91) {
+            if (input == arrows) {
                 input = getch();
-                if (input == 66)
+                if (input == up)
                     key++;
-                if (input == 65)
+                if (input == down)
                     key--;
             }
         }
-    } while (input != 10);
+    } while (input != enter);
 
     system("clear");
+
     return key;
 }

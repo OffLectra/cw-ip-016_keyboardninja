@@ -1,16 +1,28 @@
 #include "levels.h"
+
+#include "constants.h"
 #include "getch.h"
+
 #include <iostream>
 
 using namespace std;
+
+/*
+levels - this function displays a map of levels and prompts the user to select
+*/
+
 int levels()
 {
-    int key = 0;
-    int input;
+    int key = 0; // menu item
+    int input;   // key pressed
+
     do {
         system("clear");
+
         cout << "Choose level for continue" << endl << endl;
+
         key = (key + 12) % 12;
+
         if (key == 0)
             cout << "<LEVEL 1>" << endl;
         else
@@ -70,22 +82,27 @@ int levels()
             cout << "<LEVEL 12>" << endl;
         else
             cout << "LEVEL 12" << endl;
+
         input = getch();
-        if (input == 27) {
+
+        if (input == funct_button) {
             input = getch();
             if (input == 91) {
                 input = getch();
-                if (input == 66)
+                if (input == up)
                     key++;
-                if (input == 65)
+                if (input == down)
                     key--;
-                if (input == 27)
+                if (input == funct_button)
                     key = 20;
             }
         }
-    } while (input != 10 && input != 27);
+    } while (input != enter && input != funct_button);
+
     system("clear");
-    if (input == 27)
+
+    if (input == funct_button)
         key = 20;
+
     return key;
 }
