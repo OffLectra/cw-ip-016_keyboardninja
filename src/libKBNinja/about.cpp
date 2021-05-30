@@ -17,7 +17,7 @@ void about()
     cout << "Autors:" << endl;
     cout << "Alexey Egoshin | alexegoshin0403@yandex.ru" << endl;
     cout << "Maxim Valter   | maxuswill@yandex.ru" << endl;
-    cout << "Ilya Zaicev    | ilyazaytsev2017@bk.ru" << endl << endl;
+    cout << "Ilya Zaicev    | ilyazaytsev2002@bk.ru" << endl << endl;
 
     cout << "For exit press Enter" << endl;
 
