@@ -1,9 +1,10 @@
 #include "language.h"
+#include "convert_key_to_language.h"
 #include "getch.h"
 #include <iostream>
-
+#include <string>
 using namespace std;
-int language()
+string language()
 {
     int key = 0;
     int input;
@@ -34,5 +35,5 @@ int language()
         }
     } while (input != 10);
     system("clear");
-    return key;
+    return convert_key_to_language(key);
 }

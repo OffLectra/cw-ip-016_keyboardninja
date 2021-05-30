@@ -7,7 +7,12 @@
 
 using namespace std;
 
-void lvl(string path, int purpose, int max_errors, double max_time)
+void lvl(
+        std::string path,
+        int purpose,
+        int max_errors,
+        double max_time,
+        bool& is_next_lvl)
 {
     int number_lines = count_number_of_str(path);
 
@@ -44,5 +49,5 @@ void lvl(string path, int purpose, int max_errors, double max_time)
 
     int pass_lvl = check_pass_lvl(time, max_time, errors, max_errors);
 
-    results(errors, time, number_characters, pass_lvl);
+    results(errors, time, number_characters, pass_lvl, is_next_lvl);
 }

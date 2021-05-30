@@ -2,4 +2,4 @@
 #include <iostream>
 #include <string>
 using namespace std;
-string language();
+string convert_key_to_language(int key);

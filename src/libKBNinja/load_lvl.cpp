@@ -10,7 +10,7 @@
 
 using namespace std;
 
-void load_lvl(string language, int number_lvl)
+void load_lvl(string language, int number_lvl, bool& is_next_lvl)
 {
     string control_lvl = get_str(number_lvl);
 
@@ -21,5 +21,5 @@ void load_lvl(string language, int number_lvl)
 
     string path = choose_path(language, number_lvl);
 
-    lvl(path, purpose, errors, time);
+    lvl(path, purpose, errors, time, is_next_lvl);
 }
