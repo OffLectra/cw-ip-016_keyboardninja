@@ -1,14 +1,19 @@
 #include "load_lvl.h"
+
 #include "choose_path.h"
 #include "get_str.h"
 #include "lvl.h"
 #include "seporate_str.h"
+
 #include <iostream>
-#include <sstream>
 #include <string>
-#include <vector>
 
 using namespace std;
+
+/*
+load_lvl - This function loads the parameters for the level and starts the level
+itself
+*/
 
 void load_lvl(string language, int number_lvl, bool& is_next_lvl)
 {
