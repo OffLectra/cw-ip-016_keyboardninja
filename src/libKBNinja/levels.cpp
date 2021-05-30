@@ -1,6 +1,6 @@
 #include "levels.h"
 
-#include "constans.h"
+#include "constants.h"
 #include "getch.h"
 
 #include <iostream>
