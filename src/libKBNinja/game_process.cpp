@@ -25,7 +25,7 @@ void game_process()
 {
     string lang; // responsible for selecting the language in which the input
                  // will be performed
-    bool is_menu = true;  // responsible for displaying the menu
+    bool is_game = true;  // responsible for displaying the game
     bool level = false;   // responsible for change lvl
     int lvl;              // responsible for the level
     int chooselvl = 0;    // the number of the selected level, by default 0
@@ -69,19 +69,19 @@ void game_process()
                         }
                     } else {
                         level = true;
-                        is_menu = true;
+                        is_game = true;
                     }
                 } while (level == false);
             } else
-                is_menu = true;
+                is_game = true;
             break;
         case 2:
             about(); // calling a function that shows information about
                      // developers
             break;
         case 3:
-            is_menu = false; // exit the main loop and end the application
+            is_game = false; // exit the main loop and end the application
             break;
         }
-    } while (is_menu == true);
+    } while (is_game == true);
 }
