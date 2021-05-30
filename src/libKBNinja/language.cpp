@@ -2,6 +2,7 @@
 
 #include "convert_key_to_language.h"
 #include "getch.h"
+#include "constants.h"
 
 #include <iostream>
 #include <string>
@@ -32,17 +33,17 @@ string language()
 
         input = getch();
         
-        if (input == 27) {
+        if (input == funct_button) {
             input = getch();
-            if (input == 91) {
+            if (input == arrows) {
                 input = getch();
-                if (input == 66)
+                if (input == up)
                     key++;
-                if (input == 65)
+                if (input == down)
                     key--;
             }
         }
-    } while (input != 10);
+    } while (input != enter);
     
     system("clear");
     
