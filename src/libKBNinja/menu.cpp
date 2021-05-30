@@ -1,6 +1,6 @@
 #include "menu.h"
 
-#include "constains.h"
+#include "constans.h"
 #include "getch.h"
 
 #include <iostream>
