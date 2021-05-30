@@ -21,6 +21,6 @@ void error_lvl()
     do {
         input = getch();
     } while (input != enter);
-    
+
     system("clear");
 }

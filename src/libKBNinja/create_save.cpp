@@ -24,6 +24,6 @@ void create_save(string language, int lvl, bool is_next_lvl)
         else
             file << lvl;
     }
-    
+
     file.close();
 }

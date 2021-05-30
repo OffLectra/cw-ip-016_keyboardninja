@@ -60,7 +60,7 @@ void game_process()
                             chooselvl = 0; // resetting the selected level
                         } else {
                             level = true; // level selected - exit the loop
-                            
+
                             // calling the function that starts the level
                             load_lvl(lang, lvl, is_next_lvl);
 
