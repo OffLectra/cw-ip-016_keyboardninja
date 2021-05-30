@@ -13,7 +13,7 @@ void load_save(string& lang, int& lvl)
 
     ifstream savefile(path);
     if (!savefile.is_open())
-        cout << "Error";
+        cout << "Error open file with save!" << endl;
 
     int check = 0;
     while (getline(savefile, save)) {
