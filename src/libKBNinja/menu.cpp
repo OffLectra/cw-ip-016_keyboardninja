@@ -1,7 +1,11 @@
 #include "menu.h"
+
 #include "getch.h"
+
 #include <iostream>
+
 using namespace std;
+
 int menu()
 {
     int key = 0;
