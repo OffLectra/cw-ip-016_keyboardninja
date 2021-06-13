@@ -25,17 +25,17 @@ void game_process()
 {
     string lang; // responsible for selecting the language in which the input
                  // will be performed
-    bool is_game = true;  // responsible for displaying the game
-    bool level = false;   // responsible for change lvl
-    int lvl;              // responsible for the level
-    int chooselvl = 0;    // the number of the selected level, by default 0
-    bool is_next_lvl;     // responsible for whether the next level is open
-    int menu_item;        // responsible for the selected menu item
-    load_save(lang, lvl); // loading a save from a file
+    bool is_game = true; // responsible for displaying the game
+    bool level = false;  // responsible for change lvl
+    int lvl;             // responsible for the level
+    int chooselvl = 0;   // the number of the selected level, by default 0
+    bool is_next_lvl;    // responsible for whether the next level is open
+    int menu_item;       // responsible for the selected menu item
 
     do {
-        menu_item = menu(); // calling the menu function, which returns the
-                            // selected item
+        load_save(lang, lvl); // loading a save from a file
+        menu_item = menu();   // calling the menu function, which returns the
+                              // selected item
         switch (menu_item) {
         case 0:
             lang = language();   // calling the language selection function
