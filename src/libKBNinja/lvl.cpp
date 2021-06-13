@@ -62,6 +62,7 @@ void lvl(
             }
             cout << tmp; // print the symbol
         }
+        cout << endl;
     }
 
     // stop the timer
