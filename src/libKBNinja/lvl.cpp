@@ -38,6 +38,9 @@ void lvl(
     // time
     clock_t time_start, time_end;
 
+    cout << "Ready?" << endl;
+    getch();
+
     // starting the timer
     time(&time_start);
 
