@@ -12,7 +12,7 @@ tseporate_str - his function splits the resulting string into variables and
 enters the values in the level parameters
 */
 
-void seporate_str(string str, int& purpose, double& time, int& errors)
+void seporate_str(string str, int& purpose, int& time, int& errors)
 {
     char separator = ';';
 
@@ -26,6 +26,6 @@ void seporate_str(string str, int& purpose, double& time, int& errors)
     }
 
     purpose = stoi(elements[0]);
-    time = (double)stoi(elements[1]);
+    time = stoi(elements[1]);
     errors = stoi(elements[2]);
 }
