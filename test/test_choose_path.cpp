@@ -85,3 +85,33 @@ CTEST(choose_path, EN_12)
     ASSERT_STR(path.c_str(), result.c_str());
 }
 
+CTEST(choose_path, Error_lvl)
+{
+    string language = "EN";
+    int lvl = 24;
+    string path;
+    string result = choose_path(language, lvl);
+
+    ASSERT_STR(path.c_str(), result.c_str());
+}
+
+CTEST(choose_path, Error_language)
+{
+    string language = "KZ";
+    int lvl = 12;
+    string path;
+    string result = choose_path(language, lvl);
+
+    ASSERT_STR(path.c_str(), result.c_str());
+}
+
+CTEST(choose_path, Error_lvl_language)
+{
+    string language = "KZ";
+    int lvl = 57;
+    string path;
+    string result = choose_path(language, lvl);
+
+    ASSERT_STR(path.c_str(), result.c_str());
+}
+
