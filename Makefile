@@ -43,6 +43,8 @@ $(LIBRARY_PATH): $(LIBRARY_OBJ)
 	
 .PHONY: test
 test: $(TEST_PATH)
+	./$(TEST_PATH)
+	
 -include $(TEST_DEPENDENCIES)
 
 $(TEST_PATH): $(TEST_OBJ) $(LIBRARY_PATH)
