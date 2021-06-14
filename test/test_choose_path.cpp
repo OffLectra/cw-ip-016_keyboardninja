@@ -114,4 +114,3 @@ CTEST(choose_path, Error_lvl_language)
 
     ASSERT_STR(path.c_str(), result.c_str());
 }
-
