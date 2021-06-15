@@ -14,11 +14,28 @@ CTEST(select_str, Last_1)
     vector<int> used_str;
     used_str.reserve(num_str);
     
-    for(int i=0; i<num_str-2; ++i) {
+    for(int i=0; i<num_str-1; ++i) {
     	used_str.push_back(i);
 	}
     
     string exp_result = "z";
+    string result = select_str(path, num_str, used_str);
+
+    ASSERT_STR(exp_result.c_str(), result.c_str());
+}
+
+CTEST(select_str, Last_2)
+{
+    string path = "src/resources/words_EN.txt";
+    int num_str = count_number_of_str(path);
+    vector<int> used_str;
+    used_str.reserve(num_str);
+    
+    for(int i=0; i<num_str-1; ++i) {
+    	used_str.push_back(i);
+	}
+    
+    string exp_result = "Predisposition";
     string result = select_str(path, num_str, used_str);
 
     ASSERT_STR(exp_result.c_str(), result.c_str());
