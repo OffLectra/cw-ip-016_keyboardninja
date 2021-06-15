@@ -1,11 +1,22 @@
+# compiler
 CC = g++
+
+# compiler flags:
+# -Wall = basic warning aggregator
+# -Wextra = additional warning aggregator
+# -Wpedantic = verification of compliance with the standard
+# -Werror = all warnings become errors
 CFLAGS = -Wall -Wextra -Wpedantic -Werror
+
+# generating dependencies and the path to the directory with files for building the application
 CPPFLAGS = -MMD -I src
+
+# generating dependencies and the path to the directory with files for building the test
 CPPFLAGS_TEST = -MP -MMD -I src -I thirdparty
 
 APPLICATION_NAME = KBNinja
 APPLICATION_LIB = libKBNinja
-TEST_NAME = test-app
+TEST_NAME = testKBNinja
 
 SRC = src
 BIN = bin
@@ -28,6 +39,7 @@ TEST_OBJ = $(TEST_SRC:$(TEST)/%.cpp=$(OBJ)/$(TEST)/%.o)
 DEPENDENCIES = $(APPLICATION_OBJ:.o=.d)
 TEST_DEPENDENCIES = $(TEST_OBJ:.o=.d)
 
+# building the app
 .PHONY: all
 all: $(APPLICATION_PATH)
 -include $(DEPENDENCIES)
@@ -41,6 +53,7 @@ $(OBJ)/%.o: %.cpp
 $(LIBRARY_PATH): $(LIBRARY_OBJ)
 	ar rcs $@ $^
 	
+# build and run tests
 .PHONY: test
 test: $(TEST_PATH)
 	./$(TEST_PATH)
@@ -53,6 +66,7 @@ $(TEST_PATH): $(TEST_OBJ) $(LIBRARY_PATH)
 $(OBJ)/$(TEST)%.o: $(TEST)/%.cpp
 	$(CC) -c $(CFLAGS) $(CPPFLAGS_TEST) -o $@ $<
 
+# clearing the build files
 .PHONY: clean
 clean:
 	$(RM) $(APPLICATION_PATH) $(TEST_PATH)
