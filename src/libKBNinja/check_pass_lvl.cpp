@@ -2,6 +2,10 @@
 
 #include "constants.h"
 
+/*
+check_pass_lvl - the function of checking the passage of the level
+*/
+
 int check_pass_lvl(
         double current_time,
         double max_time,
