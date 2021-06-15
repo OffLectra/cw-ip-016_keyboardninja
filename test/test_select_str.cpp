@@ -48,7 +48,7 @@ CTEST(select_str, Last_3)
     vector<int> used_str;
     used_str.reserve(num_str);
 
-    for (unsigned int i = 0; i < num_str - 1; ++i) {
+    for (int i = 0; i < num_str - 1; ++i) {
         used_str.push_back(i);
     }
 
@@ -65,7 +65,7 @@ CTEST(select_str, Last_4)
     vector<int> used_str;
     used_str.reserve(num_str);
 
-    for (unsigned int i = 0; i < num_str - 1; ++i) {
+    for (int i = 0; i < num_str - 1; ++i) {
         used_str.push_back(i);
     }
 
@@ -75,3 +75,19 @@ CTEST(select_str, Last_4)
     ASSERT_STR(exp_result.c_str(), result.c_str());
 }
 
+CTEST(select_str, Error_number_str)
+{
+    string path = "src/resources/paragraph_EN.txt";
+    int num_str = count_number_of_str(path) + 10;
+    vector<int> used_str;
+    used_str.reserve(num_str);
+
+    for (int i = 0; i < num_str - 1; ++i) {
+        used_str.push_back(i);
+    }
+
+    string exp_result;
+    string result = select_str(path, num_str, used_str);
+
+    ASSERT_STR(exp_result.c_str(), result.c_str());
+}
