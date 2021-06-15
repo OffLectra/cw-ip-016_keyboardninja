@@ -1,0 +1,25 @@
+#include <ctest.h>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+#include <libKBNinja/select_str.h>
+#include <libKBNinja/count_number_of_str.h>
+
+CTEST(select_str, Last_1)
+{
+    string path = "src/resources/symbol_EN.txt";
+    int num_str = count_number_of_str(path);
+    vector<int> used_str;
+    used_str.reserve(num_str);
+    
+    for(int i=0; i<num_str-2; ++i) {
+    	used_str.push_back(i);
+	}
+    
+    string exp_result = "z";
+    string result = select_str(path, num_str, used_str);
+
+    ASSERT_STR(exp_result.c_str(), result.c_str());
+}
