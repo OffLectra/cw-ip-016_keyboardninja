@@ -11,7 +11,7 @@ done on purpose to make it easier to work with random line selection: to prevent
 going out of the file.
 */
 
-CTEST(count_str_in_file, symbol_EN)
+CTEST(count_str_in_file, Symbol_EN)
 {
     string path = "src/resources/symbol_EN.txt";
     int count = 94;
@@ -20,7 +20,7 @@ CTEST(count_str_in_file, symbol_EN)
     ASSERT_EQUAL(count, result);
 }
 
-CTEST(count_str_in_file, symbol_RU)
+CTEST(count_str_in_file, Symbol_RU)
 {
     string path = "src/resources/symbol_RU.txt";
     int count = 111;
@@ -29,7 +29,7 @@ CTEST(count_str_in_file, symbol_RU)
     ASSERT_EQUAL(count, result);
 }
 
-CTEST(count_str_in_file, words_EN)
+CTEST(count_str_in_file, Words_EN)
 {
     string path = "src/resources/words_EN.txt";
     int count = 58;
@@ -38,7 +38,7 @@ CTEST(count_str_in_file, words_EN)
     ASSERT_EQUAL(count, result);
 }
 
-CTEST(count_str_in_file, words_RU)
+CTEST(count_str_in_file, Words_RU)
 {
     string path = "src/resources/words_RU.txt";
     int count = 39;
@@ -47,7 +47,7 @@ CTEST(count_str_in_file, words_RU)
     ASSERT_EQUAL(count, result);
 }
 
-CTEST(count_str_in_file, sentence_EN)
+CTEST(count_str_in_file, Sentence_EN)
 {
     string path = "src/resources/sentence_EN.txt";
     int count = 14;
@@ -56,7 +56,7 @@ CTEST(count_str_in_file, sentence_EN)
     ASSERT_EQUAL(count, result);
 }
 
-CTEST(count_str_in_file, sentence_RU)
+CTEST(count_str_in_file, Sentence_RU)
 {
     string path = "src/resources/sentence_RU.txt";
     int count = 30;
@@ -65,7 +65,7 @@ CTEST(count_str_in_file, sentence_RU)
     ASSERT_EQUAL(count, result);
 }
 
-CTEST(count_str_in_file, paragraph_EN)
+CTEST(count_str_in_file, Paragraph_EN)
 {
     string path = "src/resources/paragraph_EN.txt";
     int count = 10;
@@ -74,7 +74,7 @@ CTEST(count_str_in_file, paragraph_EN)
     ASSERT_EQUAL(count, result);
 }
 
-CTEST(count_str_in_file, paragraph_RU)
+CTEST(count_str_in_file, Paragraph_RU)
 {
     string path = "src/resources/paragraph_RU.txt";
     int count = 31;
