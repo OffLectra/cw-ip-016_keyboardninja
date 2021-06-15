@@ -1,3 +1,3 @@
 #pragma once
 
-char getch();
+int menu();
