@@ -5,10 +5,11 @@ using namespace std;
 
 #include <libKBNinja/count_number_of_str.h>
 
-/*In fact, there is one line less in the file than the function returns. This is
- * done on purpose to make it easier to work with random line selection: to
- * prevent going out of the file.
- */
+/*
+In fact, there is one line less in the file than the function returns. This is
+done on purpose to make it easier to work with random line selection: to prevent
+going out of the file.
+*/
 
 CTEST(count_str_in_file, symbol_EN)
 {
@@ -77,6 +78,24 @@ CTEST(count_str_in_file, paragraph_RU)
 {
     string path = "src/resources/paragraph_RU.txt";
     int count = 31;
+    int result = count_number_of_str(path);
+
+    ASSERT_EQUAL(count, result);
+}
+
+CTEST(count_str_in_file, Error_path_1)
+{
+    string path = "src/resources/Symbol_EN.txt";
+    int count = 0;
+    int result = count_number_of_str(path);
+
+    ASSERT_EQUAL(count, result);
+}
+
+CTEST(count_str_in_file, Error_path_2)
+{
+    string path = "src/resources/paragraph_RU";
+    int count = 0;
     int result = count_number_of_str(path);
 
     ASSERT_EQUAL(count, result);
