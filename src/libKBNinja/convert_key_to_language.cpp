@@ -12,10 +12,12 @@ language
 
 string convert_key_to_language(int key)
 {
+    string lang;
     if (key == 1) {
-        return "EN";
+        lang = "EN";
     }
     if (key == 0) {
-        return "RU";
+        lang = "RU";
     }
+    return lang;
 }
