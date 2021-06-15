@@ -47,7 +47,7 @@ string select_str(string path, int number_lines, vector<int>& used_str)
 
         // looking for the desired string
         while (getline(file, element)) {
-            if (number_current_str == choise_sentence) {
+            if (number_current_str == choise_sentence - 1) {
                 break;
             }
             number_current_str++;
