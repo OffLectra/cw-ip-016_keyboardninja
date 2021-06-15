@@ -31,4 +31,3 @@ CTEST(convert_key_to_language, Error_key)
 
     ASSERT_STR(exp_result.c_str(), result.c_str());
 }
-
