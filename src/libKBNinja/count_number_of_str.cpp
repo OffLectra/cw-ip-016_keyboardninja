@@ -16,11 +16,14 @@ int count_number_of_str(string path)
     ifstream file(path);
 
     int count_str = 0;
-    string str;
-
-    while (!file.eof()) {
-        getline(file, str);
-        count_str++;
+    if (!file.is_open()) {
+        return count_str;
+    } else {
+        string str;
+        while (!file.eof()) {
+            getline(file, str);
+            count_str++;
+        }
     }
 
     file.close();
