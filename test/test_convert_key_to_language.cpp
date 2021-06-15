@@ -23,3 +23,12 @@ CTEST(convert_key_to_language, RU)
     ASSERT_STR(exp_result.c_str(), result.c_str());
 }
 
+CTEST(convert_key_to_language, Error_key)
+{
+    int key = 5;
+    string exp_result;
+    string result = convert_key_to_language(key);
+
+    ASSERT_STR(exp_result.c_str(), result.c_str());
+}
+
